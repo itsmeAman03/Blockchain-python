@@ -14,7 +14,7 @@ def crypto_hash(*args): #*args an take many input at once
 
     print(f"stringified_args: {stringified_args}")
 
-    joined_data='^'.join(stringified_args)
+    joined_data=''.join(stringified_args)
 
     print(f"joined data : {joined_data}")
 
