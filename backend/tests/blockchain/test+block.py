@@ -12,10 +12,13 @@ def test_genesis():
     genesis=Block.genesis()
     assert isinstance(genesis,Block)
     
-    assert genesis.timestamp== GENESIS_DATA['timestamp']
-    assert genesis.last_hash== GENESIS_DATA['last_hash']
-    assert genesis.hash== GENESIS_DATA['hash']
-    assert genesis.data== GENESIS_DATA['data']
+    # assert genesis.timestamp== GENESIS_DATA['timestamp']
+    # assert genesis.last_hash== GENESIS_DATA['last_hash']
+    # assert genesis.hash== GENESIS_DATA['hash']
+    # assert genesis.data== GENESIS_DATA['data']
     
+    #below work same sa above assert code 
     for key,value in GENESIS_DATA.items()
      assert getattr(genesis,key)==value
+
+    
