@@ -6,7 +6,8 @@ def test_mine_block():
 
     assert isinstance(block,Block)
     assert block.data=joined_data
-    assert block.last_block=last_block.hash'
+    assert block.last_block=last_block.hash
+    assert block.hash[0:difficulty]=='0'*block.difficulty
 
 def test_genesis():
     genesis=Block.genesis()
