@@ -9,14 +9,14 @@ def crypto_hash(*args): #*args an take many input at once
     #we have to conert data into string if its o string bcz it willl throw error if other data type ike int , float etc passed as data
     #to convert data into string we use json dump method
 
-    stringified_args=sorted(map(lambda data: json.dumps(data),args)) there is no need to sort data
+    stringified_args=sorted(map(lambda data: json.dumps(data),args)) #there is no need to sort data
     # stringified_args=map(json.dumps,args)
 
-    print(f"stringified_args: {stringified_args}")
+    # print(f"stringified_args: {stringified_args}")
 
     joined_data=''.join(stringified_args)
 
-    print(f"joined data : {joined_data}")
+    # print(f"joined data : {joined_data}")
 
     return hashlib.sha256(joined_data.encode('utf-8')).hexdigest() #we need to encode data for hashing
 
